@@ -1,0 +1,35 @@
+package com.company;
+
+public class SelectionSort {
+
+    public static void main(String[] args) {
+
+        int arr[]={ 10,20,12,34,13,14};
+
+         /* Arrange increasing order 
+  
+           Sample output : 10 ,12,13,14,20,34
+
+
+        */
+
+        for(int i=0;i<arr.length;i++){
+            int min=i;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[j]<arr[min]){
+                    min=j;
+                }
+            }
+            int temp=arr[i];
+             arr[i]=arr[min];
+             arr[min]=temp;
+        }
+
+        // THis outer loop is used for display the Result .
+
+        for(int i=0;i<arr.length;i++){
+
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
